@@ -1,5 +1,5 @@
 app.factory('hotelService', function ($http) {
-  var hotels = $http.get('http://localhost:3000/hotels')
+  var hotels = $http.get('http://localhost:3030/hotels')
 
   var jsondata = {
     get: function () {
@@ -10,7 +10,7 @@ app.factory('hotelService', function ($http) {
       console.log(postinghotel, "here is the data about to be posted");
       //this will obvs have to change when deployed to the deployed url
       var request = $.ajax({
-        url: "http://localhost:3000/hotels",
+        url: "http://localhost:3030/hotels",
         method: "POST",
         data: postinghotel,
         dataType: "html"
@@ -32,7 +32,7 @@ app.factory('hotelService', function ($http) {
       console.log(hotel, "look for has keyshot ihit")
 
       var request = $.ajax({
-        url: "http://localhost:3000/hotels/" + hotel.id,
+        url: "http://localhost:3030/hotels/" + hotel.id,
         method: "POST",
         data: hotel,
         dataType: "html"
